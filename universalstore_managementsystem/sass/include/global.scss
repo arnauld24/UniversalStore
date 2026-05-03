@@ -1,0 +1,46 @@
+/* global classess  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: $font-size ;
+    font-weight: $font-weight;
+}
+h2{
+    font-size: $font-size1;
+    font-weight: $font-weight1;
+}
+h3{
+    font-size: $font-size2 ;
+    font-weight: $font-weight2;
+}
+h4{
+    font-size: $font-size3 ;
+    font-weight: $font-weight3;
+}
+h5{
+    font-size: $font-size4 ;
+    font-weight: $font-weight4;
+}
+h6{
+    color: $color-white;
+}
+.nav-buttons{
+     font-family: $font-raleway;
+    margin-left: 10%;
+}
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+ }
+ button, a {
+     -webkit-tap-highlight-color: transparent;
+     }
+button,button:focus{
+    outline: none important;
+    box-shadow: none important;
+}

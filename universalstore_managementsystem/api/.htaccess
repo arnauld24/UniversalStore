@@ -1,0 +1,16 @@
+# Allow API access - override parent restrictions
+RewriteEngine On
+
+# Allow direct access to this folder
+RewriteBase /PHPPROJECT/universalstore_managementsystem/api/
+
+# Allow all real files and directories to be served directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Allow all requests to .php files in this directory
+RewriteRule ^(.+\.php)$ $1 [L,QSA]
+
+# Allow directory listing if needed
+Options +Indexes

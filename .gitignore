@@ -1,0 +1,75 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon?
+# Dependencies
+node_modules/
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+
+# PHP dependency directories
+# Ignore the entire vendor directory
+/vendor/*
+
+# But DO NOT ignore the composer directory inside vendor
+!/vendor/composer/
+
+
+# Node dependency directory
+/node_modules/
+
+# Composer binary
+composer.phar
+
+# Build / cache / temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+*.cache
+*.tmp
+*.temp
+
+# Environment and secret configuration
+.env
+.env.*
+# config/config.ini
+# config/config.php
+# config/oauth_config.php
+# config/ssl certificate.txt
+# secret keys/
+
+# Application logs and runtime-generated state
+logs/
+error_logs/
+
+# XAMPP / local server files
+*.pid
+*.sock
+*.session
+
+# Tailwind / build artifacts
+# tailwind.css
+
+# Misc local user files
+*.local
+
+# Sensitive documents
+*.pem
+*.key
+*.crt
+*.p12
+
+# Composer lock is normally committed for apps, keep it if you want deterministic installs
+# If you prefer not to upload it, uncomment the next line
+# composer.lock

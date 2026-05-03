@@ -1,0 +1,27 @@
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:CM
+State or Province Name (full name) [Some-State]:yaounde
+Locality Name (eg, city) []:center
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:UniversalStore
+Organizational Unit Name (eg, section) []:IT
+Common Name (e.g. server FQDN or YOUR name) []:localhost
+Email Address []:arnauldfonkoua@gmail.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+Enter pass phrase for privkey.pem:
+writing RSA key
+Certificate request self-signature ok
+subject=C = CM, ST = yaounde, L = center, O = UniversalStore, OU = IT, CN = localhost, emailAddress = arnauldfonkoua@gmail.com
+Could Not Find C:\xampp\apache\.rnd
+        1 file(s) moved.
+        1 file(s) moved.
+
+-----
+Das Zertifikat wurde erstellt.
+The certificate was provided.

@@ -1,0 +1,43 @@
+# Enable URL Rewriting
+RewriteEngine On
+
+# Ensure the server follows symbolic links
+Options +FollowSymLinks
+
+# 1. SET THE CORRECT BASE PATH
+RewriteBase /PHPPROJECT/universalstore_managementsystem/
+
+# 2. PREVENT REWRITING FOR REAL FILES (IMAGES, CSS, JS, LOGIC SCRIPTS)
+# If the file actually exists (like process_cart.php or style.css), serve it directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 3. CATEGORY ROUTES (BEFORE .php removal to prevent conflicts)
+# Categories Landing Page
+# Pattern: /categories -> categories.php
+RewriteRule ^categories/?$ categories.php [L,QSA]
+
+# Category-Specific Product Page
+# Pattern: /category/smartphones -> category.php?main_category=smartphones
+RewriteRule ^category/([a-z0-9-]+)/?$ category.php?main_category=$1 [L,QSA]
+
+# 4. Handle Product Pretty URLs with Category
+# Pattern: category/id/name/color -> single_product.php
+RewriteCond %{REQUEST_URI} !^/category/ 
+RewriteRule ^([^/]+)/([0-9]+)/([^/]+)/([^/]+)/?$ single_product.php?category=$1&product_id=$2&product_name=$3&color=$4 [L,QSA,NC]
+
+# 5. REMOVE .PHP EXTENSION FOR INTERFACE PAGES (ROOT & SUBFOLDERS)
+# This updated rule captures paths with slashes to support subfolders.
+# We still skip logic-sounding files for stability.
+RewriteCond %{REQUEST_URI} !/(process_|db_|connection|logout|action|category|categories) [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+)/?$ $1.php [L]
+
+# 7. Security & Encoding
+Options -Indexes
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+AddDefaultCharset UTF-8

@@ -1,0 +1,46 @@
+{
+    "name": "yourname/universalstore",
+    "description": "Universal Store project - Composer autoload setup",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "ramsey/uuid": "^4.2"
+        ,
+        "google/apiclient": "^2.0",
+        "firebase/php-jwt": "^6.0",
+        "matomo/device-detector": "^6.4",
+        "phpmailer/phpmailer": "^7.0",
+        "mpdf/mpdf": "^8.2",
+        "hachther/mesomb-php": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "external_server\\": "external_server/",
+            "account\\": "universalstore_managementsystem/",
+            "config\\": "config",
+            "core\\" : "core",
+            "internal_logic\\" : "internal_logic"
+        }
+        ,
+        "classmap": [
+            "universalstore_managementsystem/",
+            "external_server/",
+            "config/",
+            "core/",
+            "internal_logic/"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "scripts": {
+        "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Oauth2"
+        ]
+    }
+}

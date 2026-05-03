@@ -1,0 +1,96 @@
+/*   Color templates  */
+
+
+.color-primary{
+    color:$color-primary ;
+}
+
+.color-white{
+    color: $color-white;
+}
+.color-primary-bg{
+    background:$color-primary;
+}
+.color-green{
+    color: $color-green;
+}
+.color-red{
+    color: $color-red;
+}
+.color-light-blue{
+    color:$color-second ;
+}
+.color-orange{
+    color: $color-orange;
+}
+.color-light-red{
+    color: $color-light-red;
+}
+
+.color-second-bg{
+    background:$color-second;
+}
+
+.color-smoke{
+    color: whitesmoke;
+}
+.color-smoke-bg{
+    color: whitesmoke;
+}
+.color-yellow{
+    color:$color-yellow;
+}
+
+.color-yellow-bg{
+    background:$color-yellow;
+}
+
+.color-black{
+    color:$color-black;
+}
+
+.color-black-bg{
+    background:$color-black;
+}
+
+.color-smoke{
+    color: $color-smoke;
+}
+
+.color-smoke-bg{
+    background: $color-smoke;
+}
+
+.color-dark{
+    color: $color-dark;
+}
+
+.color-dark-bg{
+    background: $color-dark;
+}
+
+.color-white1{
+    color: $color-white1;
+}
+.color-fade{
+    color: $color-fade;
+}
+.color-fade-bg{
+    background: $color-fade;
+}
+
+.color-red-bg:hover{
+    background: #ee09093b;
+}
+.border-red{
+    border-color: $color-red;
+    border: 1px solid $color-red;
+}
+
+.color-gray:hover{
+    color: #4747473b;
+    
+}
+.color-gray{
+    color: #4747473b;
+}

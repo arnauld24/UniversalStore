@@ -1,0 +1,27 @@
+{
+  "name": "universalstore",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Fonkoua Arnauld",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./sass/style.scss assets/css/style1.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "@tailwindcss/vite": "^4.1.14",
+    "bootstrap": "^5.3.7",
+    "firebase": "^12.3.0",
+    "tailwind": "^2.3.1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14"
+  }
+}

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@source "../universalstore_managementsystem";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-baloo: "BalooThambi2", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}

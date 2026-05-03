@@ -1,0 +1,715 @@
+
+:root{
+    --open-sans:'Open-Sans',sans-serif;
+    --oswald: 'Oswald', sans-serif;
+    
+}
+nav{  
+    font-family: sans-serif;
+    background: #000000;
+    height: 100%;
+    position: relative;
+    box-shadow: 0px 0.1px 2px;
+    z-index: 1030;
+    top: 0;
+    border-bottom: 1px solid rgba(138, 131, 119, 0.247); 
+}
+nav > .main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1%;
+}
+
+nav .main-menu{
+    display: flex;
+    grid-gap:20px;
+}
+
+nav .main-menu > li{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+nav .main-menu li a{
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+nav .main-menu li a .help{
+    color: #ffffff96;
+    font-size: 15px;
+     font-weight: 600;
+}
+nav .main-menu li a .help:hover{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    transition: all .3s ease-in-out;
+}
+nav .main-menu li:hover a{
+    color: rgb(255, 255, 255);
+}
+nav .purchase-btn{
+    padding: 10px 11px;
+    border-radius: 5px;
+    border:1px solid white;
+    font-weight: 600;
+    background: #eeeeee33;
+    transition: 0.4s all;
+    cursor: pointer;
+
+}
+nav .purchase-btn a{
+    text-decoration: none;
+    color: #ffffff96;
+}
+nav .purchase-btn:hover{
+    background: #4c23ad;
+}
+nav .purchase-btn:hover a{
+    color: rgb(255, 255, 255) ;
+}
+
+nav .mini-nav{
+    max-width: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 30px;
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+nav .mini-nav li a{
+    color: #000;
+    text-decoration: none;
+}
+nav .mini-nav .flag{
+    position: relative;
+    width: 25px;
+    height: 16px;
+    border-radius: 2px;
+    margin-right: 5px;
+    display: inline-block;
+}
+nav .mini-nav .mini-nav-content{
+    position: relative;
+    display: flex;
+    grid-gap: 15px;
+    top: 4px;
+   }
+nav .mini-nav .mini-nav-content li{
+    list-style: none;
+    font-size: 13px;
+    font-weight: 550;
+}
+nav .mini-nav .mini-nav-content li .fas{
+    margin-right: 5px ;
+    color: rgba(89, 0, 255, 0.445);
+}
+nav .mini-nav .mini-nav-content li a{
+    cursor: pointer;
+    
+}   
+nav .mini-nav .mini-nav-content li a:hover{
+    color: rgb(80, 76, 76);
+    text-decoration: underline;
+}
+
+nav .toggle-navbar{
+    cursor: pointer;
+    position: relative;
+    z-index: 200;
+    transition: all .3s ease;
+    display: none;
+}
+
+nav .brand{
+    display: flex;
+    margin-right: 2%;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+nav .brand .logo{
+    position: relative;
+   border-radius: 8px;
+   object-fit: cover;
+   width: 40px;
+   height: 40px;
+   
+}
+nav .search-rows{
+    display: none;
+}
+nav .search-boxes{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 400px;
+}
+nav .search-boxes i{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav .search-boxes input[type='search']::placeholder{
+    font-weight: 600;
+    font-size: 15px;
+}
+nav .search-boxes input[type='search']{
+    width: 100%;
+    padding: 10px 40px 10px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+nav .main-menu .cart{
+    color: #eeeeee8e;
+    padding: 3px 8px;
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+nav .main-menu .cart:hover{
+    background: #f0f0f093;
+    
+}
+nav .main-menu .cart-item{
+    position: absolute;
+    top: -10px;
+    transform: translate(center);
+    border-radius: 10px;
+    color: #fff;
+    background: rgb(236, 20, 20);
+    padding: 2px 7px;
+    font-size: .075rem;
+    font-weight: 600;
+}
+
+nav .main-menu .account-btn{
+    padding: 14px 15px;
+    background: #dfdfdf7a;
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+    border: 2px solid transparent;
+    
+}
+nav .main-menu .account-btn:hover{
+    background: #f0f0f093;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+nav .main-menu li .dropdown-menu {
+    background: #fff;
+    position: absolute;
+    z-index: 1040;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.5rem 0;
+}
+
+nav .main-menu li .dropdown-menu li a {
+    color: #212529;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+}
+
+nav .main-menu li .dropdown-menu li a:hover {
+    background: #f8f9fa;
+    color: #000;
+}
+nav .main-menu li .dropdown-menu li .logout:hover{
+   background: rgba(255, 0, 0, 0.021);
+}
+nav .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 100%;
+    
+}
+nav .nav-menu{
+    display: flex;
+    grid-gap: 36px;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: auto;
+    
+}
+nav .nav-menu::-webkit-scrollbar{
+    height: 1px;
+    width: 3px;
+
+}
+nav .nav-menu::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #888;
+}
+
+nav .nav-menu li{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+nav .nav-menu .flags{
+    display: none;
+}
+nav .nav-menu li a{
+    color: #ffffff96;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+nav .nav-menu li:hover a{
+    color: rgb(255, 255, 255);
+}
+nav .nav-menu li a .hidden-arrow{
+    display: none;
+    margin-left: auto;
+}
+nav .nav-menu li a .hidden{
+    display: none;
+}
+nav .nav-menu .mini-nav-link{
+    display: none;
+}
+nav .nav-menu li .bottom:hover .hidden{
+    display: block;
+    position: relative;
+    top: 16px;
+    height: 5px;
+    width: 100%;
+    background: rgb(153, 153, 153);
+}
+
+nav .nav-menu li .dropdown-menu{
+    position: absolute;
+    top: 165px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    overflow-y: auto;
+    max-height: 0;
+    transition: all .3s ease;
+    display: none;
+
+}
+nav .nav-menu > li:hover .dropdown-menu{
+    max-height: 100vh;
+    display: block;
+}
+nav .nav-menu li .dropdown-menu .container{
+    display: flex;
+    grid-gap: 56px;
+    flex-wrap: wrap;
+    padding: 24px 16px 40px;
+}
+
+nav .nav-menu li .dropdown-menu .left-section {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+nav .nav-menu li .dropdown-menu .left-section .dropdown-close{
+    cursor: pointer;
+    margin-bottom: 28px;
+    display: none;
+}
+nav .nav-menu li .dropdown-menu .left-section h1{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+nav .nav-menu li .dropdown-menu .left-section p{
+    line-height: 170%;
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 30px;
+}
+nav .nav-menu li .dropdown-menu .left-section .btn-see-all{
+    padding: 12px 40px;
+    background: rgb(113, 7, 184);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    transition: all .3s ease;
+}
+nav .nav-menu li .dropdown-menu .left-section .btn-see-all:hover{
+    background: rgba(92, 14, 216, 0.815);
+}
+nav .nav-menu li .dropdown-menu .right-section{
+    flex-grow: 1;
+    flex-basis: 700px;
+}
+nav .nav-menu li .dropdown-menu .right-section h5{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+nav .nav-menu li .dropdown-menu .right-section .dropdown-links{
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-gap: 20px;
+}   
+nav .nav-menu li .dropdown-menu .right-section li{
+    flex-grow: 1;
+    flex-basis: 400px;
+    list-style: none;   
+    height: fit-content;
+    /* background: #eeeeeea2;   in case you want all objects to have the same bg color*/
+    width: 100%;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+nav .nav-menu li .dropdown-menu .right-section li:hover{
+    transform: scale(1.06);
+    transition: 0.5s ease-in-out;
+}
+nav .nav-menu li .dropdown-menu .right-section li a{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    transition: all .3s ease;
+    color: #000;
+   
+}
+nav .nav-menu li .dropdown-menu .right-section li a .dropdown-img,
+nav .nav-menu li .dropdown-menu .right-section li a .dropdown-img2,
+nav .nav-menu li .dropdown-menu .right-section li a .dropdown-img3,
+nav .nav-menu li .dropdown-menu .right-section li a .dropdown-img4{
+    object-fit: contain;
+    width: 100%;
+    border-radius: 10px;
+}
+nav .nav-menu li .dropdown-menu .right-section li a p{
+    font-size: 15px;
+    color: rgba(2, 2, 2, 0.726);
+    transition: all .3s ease;
+    font-weight: 600;
+}
+nav .nav-menu li .dropdown-menu .right-section li:hover a p{
+    color: #000;
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px){
+    /* Mobile: top row = brand (left) + action icons (right). Second row = search + purchase button full-width */
+    nav .main-nav{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        gap: 0;
+    }
+    /* Ensure first search bar is not display on small screen */
+    nav .main-nav .hiddens{
+        display: none;
+        margin-right: 0;
+    }
+    /* Ensure first purchase-btn is not display on small screen */
+    nav .main-menu .hiddens{
+        display: none;
+    }
+    /* Ensure main-menu (actions) sits on the right */
+    nav .main-menu {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        gap: 26px;
+        margin-right: 5%;
+    }
+    nav .main-menu .cart-item{
+        top: -10px;
+    }   
+
+    /* Brand: keep at start of the row, no bottom margin */
+    nav .brand{
+        position: relative;
+        margin-right: -1%;
+        font-size: 15px;
+        top: -10px;
+        display: flex;
+    }
+
+    /* Make search and purchase occupy a full-width second row below the top row */
+    nav .search-rows{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        width: 100%;
+        margin-top: 0;
+        padding: 0 16px 10px;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    nav .search-boxs{
+        width: calc(100% - 160px);
+        max-width: none;
+        margin: 0;
+        flex: 1 1 auto;
+    }
+
+    /* Start shopping / purchase button area */
+    nav .purchase-btn{
+        min-width: 120px;
+        flex: 0 0 120px;
+        align-self: center;
+    }
+
+    /* Hide help text in small links */
+    nav .main-menu li a .help{
+      display: none;
+    }
+
+    nav .nav-menu{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        z-index: 100;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: 20px;
+        padding-left: 24px;
+        padding-top: 60px;
+        transition: all .3s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    nav .nav-menu.show{
+        left: 0;
+    }
+    nav .nav-menu.hidden{
+        overflow-y: hidden;
+    }
+    
+    nav .nav-menu li .dropdown-menu{
+        top: 0;
+        overflow-y: auto;
+        height: 100%;
+        max-height: 100vh;
+        left: 100%;
+        transition: all .3s ease;
+    }
+    nav .nav-menu li .dropdown-menu.show{
+        left: 0;
+    }
+    nav .nav-menu > li:hover .dropdown-menu{
+         max-height: 100vh;
+    }
+    nav .nav-menu li a .hidden-arrow{
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 80%;
+    }
+    nav .nav-menu li .bottom:hover .hidden{
+        display: none;
+    }
+    nav .nav-menu li .dropdown-menu .left-section .dropdown-close{
+        display: inline-block;
+    }
+   
+    /* Mini nav*/
+    nav .mini-nav{
+        display: none;
+    }
+    nav .nav-menu .mini-nav-link{
+        height: 40px;
+        display: block;
+       font-size: 12px;
+       margin-top: 10px;
+     }
+    nav .nav-menu .mini-nav-link:hover{
+        color: rgb(80, 76, 76);
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+    nav .nav-menu .mini-nav-link .fas, nav .nav-menu .mini-nav-link .fa-solid{
+        margin-left: 5px ;
+        color: rgba(89, 0, 255, 0.445);
+    }
+
+    /* Toggle button visible on mobile (if used) */
+    nav .toggle-navbar{
+        display: block;
+        margin-left: 0;
+        transition-delay: .3s;
+        color: #ffffffa8;
+        border: 1px solid rgba(255, 255, 255, 0.479);
+        border-radius: 5px;
+        padding: 5px 10px;
+        transition: 0.3s ease-in-out;
+        top: -7px;
+    } 
+    nav .toggle-navbar:hover{
+        background: rgb(64, 0, 214);
+    }
+   
+     nav .toggle-navbar.hide{
+        opacity: 0;
+        pointer-events: none;
+        transition-delay: 0s;
+    }
+    nav .nav-menu .flags{
+        display: inline-block;
+        position: relative;
+        padding: 8px 55%;
+        background: #eee;
+        border-top: 3px solid #888888ce;
+        right: 30px;
+    }
+    nav .nav-menu .flags .flag{
+        width: 20px;
+        height: 15px;
+        border-radius: 2px;
+        position: relative;
+        left: -320px;
+    }
+    nav .nav-menu .flags .cm{
+        position: relative;
+        left: -295px;
+        top: -18px;
+    }
+}
+
+@media screen and (max-width:576px){
+    nav .nav-menu{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        z-index: 100;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: 20px;
+        padding-left: 24px;
+        padding-top: 60px;
+        transition: all .3s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    nav .nav-menu li{
+        height: 70px;
+    }
+    nav .nav-menu.show{
+        left: 0;
+    }
+    nav .main-menu .cart-item{
+        top: -10px;
+    }   
+
+    nav .nav-menu li .dropdown-menu{
+        top: 0;
+        overflow-y: auto;
+        height: 100%;
+        max-height: 100vh;
+        left: 100%;
+        transition: all .3s ease;
+    }
+    nav .nav-menu li .dropdown-menu.show{
+        left: -1px;
+    }
+
+    nav .nav-menu li:hover .dropdown-menu{
+         max-height: 100vh;
+    }
+    nav .nav-menu li .dropdown-menu .right-section .dropdown-links{
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+        }
+    nav .nav-menu li a .hidden-arrow{
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 86%;
+    }
+    nav .nav-menu li .bottom:hover .hidden{
+        display: none;
+    }
+    nav .nav-menu li .dropdown-menu .left-section .dropdown-close{
+        display: inline-block;
+    }
+     /* Mini nav*/
+    nav .mini-nav{
+        display: none;
+    }
+     nav .nav-menu .mini-nav-link{
+        height: 40px;
+        display: block;
+        font-size: 12px;
+     }
+    nav .nav-menu .mini-nav-link:hover{
+        color: rgb(80, 76, 76);
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+    nav .nav-menu .mini-nav-link .fas, nav .nav-menu .mini-nav-link .fa-solid{
+        margin-left: 5px ;
+        color: rgba(89, 0, 255, 0.445);
+    }
+    nav .toggle-navbar{
+        display: block;
+        transition-delay: .3s;
+        color: #ffffffa8;
+        border: 1px solid rgba(255, 255, 255, 0.479);
+        border-radius: 5px;
+        padding: 5px 10px;
+        top: -7px;
+    }
+    nav .toggle-navbar:hover{
+        background: rgb(64, 0, 214);
+        outline: 4px solid rgba(247, 247, 247, 0.822);
+    }
+
+     nav .toggle-navbar.hide{
+        opacity: 0;
+        pointer-events: none;
+        transition-delay: 0s;
+    }
+    nav .nav-menu .flags{
+        display: inline-block;
+        position: relative;
+        padding: 8px 55%;
+        background: #eee;
+        border-top: 3px solid #888888ce;
+        right: 30px;
+    }
+    nav .nav-menu .flags .flag{
+        width: 20px;
+        height: 15px;
+        border-radius: 2px;
+        position: relative;
+        left: -200px;
+    }
+    nav .nav-menu .flags .cm{
+        position: relative;
+        left: -180px;
+        top: -18px;
+    }
+}

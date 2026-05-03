@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+body{
+    position: relative;
+	background: linear-gradient(90deg, #04041b13,#030b2713);
+/*	background-image: url("../imgs/login.jpeg"); */
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content:center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.contain{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 1rem;
+}
+
+.form{
+	position: relative;
+	background: #040a18f3;
+	width:100%;
+	max-width: 43.75rem;
+	border-radius: 0.5rem;
+	box-shadow: 0.1875rem 0.1875rem 0.625rem 0.3125rem rgba(0,0,0,0.2);
+	padding: 3.875rem;
+	margin: 5rem 0;
+
+}
+
+.form h1{
+	
+	color: rgb(220, 216, 255);
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+.form p{
+	font-size:1rem;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+	margin: 1.25rem;
+	color: rgb(255, 255, 255);
+
+}
+
+.form form{
+	margin: 0.5rem 0 ;
+}
+
+/* ERROR HANDLING STYLING */
+
+.otp_error{
+   display: block;
+   color:#ff0019;
+   padding: 0.25rem 0.375rem;
+   text-align:center;
+   font-weight: 600;
+   border-radius:0.25rem;
+   font-size: 18px;
+   margin-bottom:0.5rem;
+}
+.form form .error-text{
+	display: none;
+   color:#ff0019;
+   padding: 0.25rem 0.375rem;
+   text-align:center;
+   font-weight: 600;
+   border-radius:0.25rem;
+   font-size: 18px;
+   /* border-radius:0.25rem;
+   background:#ffe3e5;
+   border: 0.0625rem solid #dfa5ab; */
+   margin-bottom:0.5rem;
+}
+/*  END OF ERROR HANDLING */
+.form form .input input{
+	height: 2.5rem;
+	width: 100%;
+	font-size: 0.875rem;
+	margin: 0.3125rem 0.0625rem;
+	padding: 0 0.5rem;
+	border: 0.0625rem solid #ccc;
+	border-radius:0.3125rem;
+	outline:none;
+}
+.form form .input input:focus,
+.form form .input input:valid {
+	border:0.125rem solid #0026a1;
+	transition:0.1s ease;
+	outline: none;
+}
+
+.form form input.button{
+	height: 2.8125rem;
+	border: none;
+	color: #f2f3f7;
+	width: 100%;
+	font-weight: bold;
+	background: #0000008e;
+	font-size:1.0625rem;
+	border-radius: 0.3125rem;
+	cursor: pointer;
+	margin-top: 0.8125rem;
+	box-shadow:1px 1px 1px 1px #fff;
+}
+.form form input.button:hover{
+	background-color: rgba(255, 255, 255, 0.068);
+
+}
+
+.form .fields-input{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	margin: 0.9375rem 0;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+}
+.form .otp_field{
+	border-radius: 0.3125rem;
+	font-size: 3.4375rem;
+	height:5.75rem;
+	width:5.75rem;
+	border: 0.1875rem solid #cacaca;
+	margin: 0;
+	text-align: center;
+	font-weight:600;
+	outline: none;
+}
+.form .otp_field::-webkit-inner-spin-button,
+.form .otp_field::-webkit-outer-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+.form .otp_field:valid{
+	border-color: #3095dB;
+	box-shadow: 0 0.625rem 0.625rem -0.3125rem rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+	.form {
+		padding: 2.5rem;
+		margin: 2rem 0;
+	}
+	.form h2 {
+		font-size: 1.25rem;
+	}
+	.form p {
+		font-size: 0.875rem;
+		margin: 1rem;
+	}
+	.form .otp_field {
+		font-size: 3rem;
+		height: 5rem;
+		width: 4.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.form {
+		padding: 3.25rem;
+		margin: 1.5rem 0;
+	}
+	.form h2 {
+		font-size: 1.125rem;
+	}
+	.form p {
+		font-size: 0.8125rem;
+		margin: 0.875rem;
+	}
+	.form .otp_field {
+		font-size: 1.5rem;
+		height: 3rem;
+		width: 3rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.form {
+		padding: 1rem;
+		margin: 1rem 0;
+	}
+	.form h2 {
+		font-size: 1rem;
+	}
+	.form p {
+		font-size: 0.75rem;
+		margin: 0.75rem;
+	}
+	
+.form .fields-input{
+	gap: 0.2rem;
+}
+	.form .otp_field {
+		font-size: 2rem;
+		height: 2.5rem;
+		width: 2.2rem;
+	}
+}

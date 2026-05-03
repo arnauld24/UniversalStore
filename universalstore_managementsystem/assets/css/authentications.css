@@ -1,0 +1,343 @@
+/* AUTHENTICATION DESIGN */
+
+/* LOGIN  FORM */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+input::-ms-reveal {
+    display: none;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: linear-gradient(90deg, #ffffff,#040816c7);
+}
+
+.container{
+    position: relative;
+    width: 90vw;
+    max-width: 850px;
+    height: 60vh;
+    min-height: 550px;
+    background: #fff;
+    margin: 1rem;
+    border-radius: 1.875rem;
+    box-shadow: 0 0 1.875rem rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.container p{
+    font-size: 0.90625rem;
+    margin: 0.9375rem 0;
+}
+form{
+    width: 100%;
+}
+.form-box {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 2.5rem;
+    transition: 0.6s ease-in-out 1.2s, visibility 0s 1s;
+    z-index: 1;
+}
+
+
+.container.active .form-box{
+    right: 50%;
+}
+.form-box.signup{
+    visibility: hidden;
+}
+
+.container.active .form-box.signup{
+    visibility: visible;
+}
+
+.container .input-box{
+    position: relative;
+    margin: 1.875rem 0;
+}
+.form-box #signup-form .input-box input{
+    margin-bottom: -15px;
+   
+}
+.container .input-box input{
+    width: 100%;
+    padding: 0.8125rem 3.125rem 0.8125rem 1.25rem;
+    background: #eee;
+    border-radius: 2.5rem;
+    border: 2px solid rgba(59, 59, 75, 0.322);
+    outline: rgb(45, 45, 112);
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+.container .input-box input:focus{
+    border: 2px solid rgb(0, 8, 255);
+}
+.container .input-box input::placeholder{
+    color: #888;
+    font-weight: 400;
+}
+
+.container .input-box i{
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+}
+
+.container .forgot-link{
+    margin: -0.9375rem 0 0.9375rem;
+
+}
+.container .forgot-link a{
+    font-size: 0.90625rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+.container .forgot-link a:hover{
+    color: gray;
+}
+.container .login-btn, .signup-btn{
+    width: 100%;
+    height: 2.5rem;
+    background: #172449;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 600;
+
+}
+.container .login-btn:hover, .signup-btn:hover{
+    background: #172449f1;
+}
+
+.container .social-icons{
+    display: flex;
+    justify-content: center;
+}
+
+.container .social-icons a{
+    display: inline-flex;
+    padding: 0.625rem;
+    border: 0.125rem solid #ccc;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.container .social-icons a:hover{
+    background: #0f1424d2;
+    color: white;
+}
+
+.toggle-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.toggle-box::before{
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background:#040a18;
+    border-radius: 9.375rem;
+    z-index: 2;
+    transition: 1.6s ease-in-out;
+
+}
+
+.container.active .toggle-box::before{
+    left: 50%;
+}
+
+.container .toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform: 0.6s ease-in-out;
+}
+
+.container .toggle-panel.toggle-left{
+    left: 0;
+    transition-delay: 1.2s;
+}
+
+.container.active .toggle-panel.toggle-left{
+    left: -50%;
+    transition-delay: 0.6s;
+}
+
+.toggle-panel.toggle-right{
+    right: -50%;
+    transition-delay: 0.6s;
+}
+
+.container.active .toggle-panel.toggle-right{
+    right: 0;
+    transition-delay: 1.2s;
+}
+
+.container .toggle-panel p{
+    margin-bottom: 1.25rem;
+    font-size: 18px;
+}
+.container .toggle-panel h2{
+    color: #0044ff;
+}
+
+.container .toggle-panel .btn{
+    width: 10rem;
+    height: 2.875rem;
+    border: 0.125rem solid #fff ;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    background: transparent;
+}   
+.container .toggle-panel .btn:hover{
+    background: #1d1247 !important;
+}
+
+
+#auth-status {
+    display: none;
+    text-align: center;
+    color: red;
+    font-size: 0.9em;
+    border-radius: 2px;
+    background: rgba(243, 163, 163, 0);
+    padding: 10px;
+}   
+.container #signup-auth-status {
+    display: none;
+    text-align: center;
+    color: red;
+    font-size: 0.9em;
+    border-radius: 2px;
+    background: rgba(255, 167, 167, 0);
+    padding: 10px;
+    margin-bottom: -10px;
+}
+.google-error{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    max-width:600px;
+    z-index: 10;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+.social-icons .google_oauth{
+    display: inline-flex;
+    padding: 0.625rem;
+    border: 0.125rem solid #ccc;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    background: white;
+}
+.social-icons .google_oauth:hover{
+     background: #0f1424d2;
+    color: white;
+}
+/*  MEDIA STYLING*/
+
+@media screen and (max-width:650px) {
+    .google-error{
+        max-width: 90%;
+       
+    }
+    .container{
+        height: calc(100vh - 2.5rem);
+    }
+
+    .form-box{
+        width: 100%;
+        height: 70%;
+        bottom: 0;
+        padding: 1.25rem 1.875rem;
+    }
+  
+    .container.active .form-box{
+        right: 0;
+        bottom: 28%;
+    }
+    .toggle-box::before{
+        left: -3%;
+        top: -270%;
+        width: 100%;
+        height: 300%;
+        border-radius: 20vw;
+    }
+    .container.active .toggle-box::before{
+        top: 75%;
+        left: -3%;
+    }
+    .container .toggle-panel{
+        width: 100%;
+        height: 30%;
+
+    }
+    .toggle-panel.toggle-left{
+        top: 0;
+    }
+    .container.active .toggle-panel.toggle-left{
+        left: 0;
+        top: -30%;
+    }
+    .toggle-panel.toggle-right{
+        right: 0;
+        bottom: -30%;
+    }
+    .container.active .toggle-panel.toggle-right{
+        bottom: -3%;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .form-box{
+        padding: 1.25rem;
+    }
+   .toggle-panel h3{
+    font-size: 1.875rem;
+   }
+}

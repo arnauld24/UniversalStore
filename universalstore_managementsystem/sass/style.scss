@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Black.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-BlackItalic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-Bold.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-BoldItalic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-ExtraBoldItalic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-ExtraLight.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-ExtraLightItalic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-Italic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-Light.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-LightItalic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-Medium.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-MediumItalic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-Regular.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-SemiBold.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-SemiBoldItalic.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-Thin.ttf') format('ttf'),
+     url('../fonts/Poppins/Poppins-ThinItalic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: oblique;
+}
+@font-face {
+  font-family: 'BalooThambi2';
+  src: url('../fonts/Baloo_Thambi_2/static/BalooThambi2-Bold.ttf') format('ttf'),
+       url('../fonts/Baloo_Thambi_2/static/BalooThambi2-ExtraBold.ttf') format('ttf'),
+       url('../fonts/Baloo_Thambi_2/static/BalooThambi2-Medium.ttf') format('ttf'),
+       url('../fonts/Baloo_Thambi_2/static/BalooThambi2-Regular.ttf') format('ttf'),
+       url('../fonts/Baloo_Thambi_2/static/BalooThambi2-SemiBold.ttf') format('ttf'),
+       url('../fonts/Baloo_Thambi_2/BalooThambi2-VariableFont_wght.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/static/Raleway-Italic-VariableFont_wght.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-VariableFont_wght.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-Black.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-BlackItalic.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-Bold.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-BoldItalic.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-ExtraBold.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-ExtraBoldItalic.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-ExtraLight.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-ExtraLightItalic.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-Italic.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-Light.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-LightItalic.ttf') format('ttf'),
+     url('../fonts/Raleway/static/Raleway-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/static/Rubik-Italic-VariableFont_wght.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-VariableFont_wght.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-Black.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-BlackItalic.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-Bold.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-BoldItalic.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-ExtraBold.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-ExtraBoldItalic.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-Italic.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-Light.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-Medium.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-MediumItalic.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-Regular.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-SemiBold.ttf') format('ttf'),
+   url('../fonts/Rubik/static/Rubik-SemiBoldItalic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face{
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto/static/Roboto-Bold.ttf') format('ttf'),
+       url('../assets/fonts/Roboto/static/Roboto-SemiBold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal
+}
+
+/*  Navbar styling  */
+
+
+/* sass Templates */
+
+@import'./include/variables.scss';
+
+@import'./include/global.scss';
+
+@import'./include/typography.scss';
+
+@import'./include/local.scss';
+
+@import'./include/color.scss';

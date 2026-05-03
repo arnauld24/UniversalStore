@@ -1,0 +1,23 @@
+
+body{
+    background-image: url('https://ik.imagekit.io/univ35tore/universal_store/imgs/sadd.jpg?updatedAt=1770682542778');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: border-box;
+    
+
+}
+.error-container { 
+    max-width: 800px; margin: 200px auto; padding: 100px; 
+    border: 1px solid #cccccc00; border-radius: 8px; 
+    background-color: #f8f8f800; text-align: center; 
+    
+}
+h1 { font-size: 5em; color: #dc3545; margin-bottom: 0; }
+h2 { color: #000000; margin-top: 10px; font-size: 3em;}
+p { color: #000000; font-size: 2em;}
+a{
+    font-size: 1.8em;
+}
+

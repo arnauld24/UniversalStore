@@ -1,0 +1,3 @@
+# Block direct access to all PHP files in this directory.
+Order Deny,Allow
+Deny from all
