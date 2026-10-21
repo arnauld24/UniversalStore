@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --watch",
+    "dev": "npx tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --minify",
     "build": "npx tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css",
-    "watch": "tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --watch"
+    "watch": "tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --minify"
   },
   "keywords": [],
   "author": "",
