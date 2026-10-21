@@ -1,13 +1,13 @@
 {
   "name": "phpproject",
   "version": "1.0.0",
-  "description": "📄 **[QUICK_START.md](QUICK_START.md)** (5 min read)\r - ⚡ TL;DR format\r - 🎯 1-minute setup steps  \r - 🐛 Troubleshooting table\r - ✅ Verification checklist",
+  "description": "UniversalStore E-Commerce Platform",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --minify",
-    "build": "npx tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css",
-    "watch": "tailwindcss -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --minify"
+    "dev": "npx @tailwindcss/cli -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --watch",
+    "build": "npx @tailwindcss/cli -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --minify",
+    "watch": "npx @tailwindcss/cli -i ./tailwind/input.css -o ./universalstore_managementsystem/assets/css/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
